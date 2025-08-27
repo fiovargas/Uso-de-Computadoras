@@ -1,38 +1,42 @@
-import{getUsers, postUsers, deleteUsers, putUsers} from "../services/ServicesUser.js"
+import { getUsers } from "../services/ServicesUser.js";
 
+const correo = document.getElementById("correo")
+const contraseña = document.getElementById("contraseña")
+const ingresar = document.getElementById("ingresar")
 
-const usuario = document.getElementById("usuario");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const confirmarPassword = document.getElementById("confirmarPassword");
-const tipoUser = document.getElementById("tipoUser");
-const estudiante = document.getElementById("estudiante");
-const administrador = document.getElementById("administrador");
-const registrarse = document.getElementById("registrarse");
+ingresar.addEventListener("click",async function () {
+const email = correo.value.trim();
+    const pass = contraseña.value.trim();
 
+    // Validar campos vacíos
+    if (!email || !pass) {
+        Toastify({
+            text: "Debes completar todos los campos.",
+            duration: 3000
+        }).showToast();
+        return;
+    }
 
-registrarse.addEventListener("click", async function () {
+    try {
+        // Obtener todos los usuarios
+        const usuarios = await getUsers();
 
-if (password.value !== confirmarPassword.value) {
-    Toastify({
-        text: "Las contraseñas no coinciden",
-        duration: 3000
-    }).showToast();
+        // Verificar si hay coincidencia
+        const usuario = usuarios.find(u => u.correo === email && u.password === pass);
 
-    return;
-};
-
-    const Regis = {
-        usuario:usuario.value,
-        email:email.value,
-        password:password.value,
-        tipoUser:tipoUser.value
-    };
-
-    console.log(Regis);
-    
-    const respuesta = await postUsers(Regis);
-
-    console.log(respuesta);
+        if (usuario) {
+            window.location.href = "formulario.html"; // Si hay coincidencia, redirige
+        } else {
+            Toastify({
+                text: "Correo o contraseña incorrectos.",
+                duration: 3000
+            }).showToast();
+        }
+    } catch (error) {
+        console.error("Error al obtener usuarios:", error);
+        Toastify({
+            text: "No se pudo conectar al servidor.",
+            duration: 3000
+        }).showToast();
+    }
 });
-

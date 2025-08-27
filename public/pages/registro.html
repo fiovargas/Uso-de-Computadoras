@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Permisos</title>
+    <link rel="stylesheet" href="../style/registro.css">
+</head>
+<body>
+
+<div id="general">
+    <label id="name" for="name">Nombre</label>
+    <input id="name" type="text">
+
+    <label id="email" for="email">Correo</label>
+    <input id="email" type="email">
+
+    <label id="password" for="password">Contraseña</label>
+    <input id="password" type="password">
+
+    <label id="confirmarPassword" for="confirmarPassword">Confirmar contraseña</label>
+    <input id="confirmarPassword" type="password">
+
+<select id="Registro">
+    <option value="" disabled selected>Seleccione el tipo de usuario</option>
+    <option id="estudiante" value="estudiante">Estudiante</option>
+    <option id="administrador" value="administrador">Administrador</option>
+</select>
+
+    <button id="registrarse" type="submit">Registrarse</button>
+</div>
+
+
+    <script type="module" src="../js/registro.js"></script>
+</body>
+</html>

@@ -1,6 +1,3 @@
-export { getUsers, postUsers, deleteUsers, putUsers };
-
-
 async function getUsers() { //Función para Get
     
     try {
@@ -9,10 +6,11 @@ async function getUsers() { //Función para Get
             method: 'GET',
             headers :{
                 'Content-Type': 'application/json'
-            }    
+            }
+                    
         })
 
-        const users = await response.json();
+        const users = await response.json()
 
         return users    
         
@@ -20,9 +18,11 @@ async function getUsers() { //Función para Get
 
         console.error("Existe un error al obtener los usuarios", error)
         throw error
+        
     }
 }
 
+export{getUsers}
 
 async function postUsers(Usuarios) { //Función para Post
     
@@ -33,10 +33,11 @@ async function postUsers(Usuarios) { //Función para Post
             headers :{
                 'Content-Type': 'application/json'
             },
-            body:JSON.stringify(Usuarios)     
-        });
+            body:JSON.stringify(Usuarios)
+                    
+        })
 
-        const users = await response.json();
+        const users = await response.json()
 
         return users    
         
@@ -44,9 +45,11 @@ async function postUsers(Usuarios) { //Función para Post
 
         console.error("Existe un error al crear los usuarios", error)
         throw error
+        
     }
 }
 
+export{postUsers}
 
 async function deleteUsers(id) { //Función para Delete
     
@@ -56,10 +59,12 @@ async function deleteUsers(id) { //Función para Delete
             method: 'DELETE',
             headers :{
                 'Content-Type': 'application/json'
-            },   
-        });
+            },
+            
+                    
+        })
 
-        const users = await response.json();
+        const users = await response.json()
 
         return users    
         
@@ -67,9 +72,11 @@ async function deleteUsers(id) { //Función para Delete
 
         console.error("Existe un error al eliminar los usuarios", error)
         throw error
+        
     }
 }
 
+export{deleteUsers}
 
 async function putUsers(Usuarios,id) { //Función para put
     
@@ -80,10 +87,11 @@ async function putUsers(Usuarios,id) { //Función para put
             headers :{
                 'Content-Type': 'application/json'
             },
-            body:JSON.stringify(Usuarios)    
-        });
+            body:JSON.stringify(Usuarios)
+                    
+        })
 
-        const users = await response.json();
+        const users = await response.json()
 
         return users    
         
@@ -91,6 +99,8 @@ async function putUsers(Usuarios,id) { //Función para put
 
         console.error("Existe un error al editar los usuarios", error)
         throw error
+        
     }
 }
 
+export{putUsers}
