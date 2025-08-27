@@ -1,41 +1,42 @@
-const urlUsuarios = "http://localhost:3000/usuarios";
+import { getUsers } from "../services/ServicesUser.js";
 
+const correo = document.getElementById("correo")
+const contraseña = document.getElementById("contraseña")
+const ingresar = document.getElementById("ingresar")
 
-document.getElementById("ingresar").addEventListener("click", async () => {
-    const correo = document.getElementById("id").value.trim();
-    const password = document.getElementById("contraseña").value.trim();
+ingresar.addEventListener("click",async function () {
+const email = correo.value.trim();
+    const pass = contraseña.value.trim();
 
-    if (!correo || !password) {
-        alert("Debes completar todos los campos.");
+    // Validar campos vacíos
+    if (!email || !pass) {
+        Toastify({
+            text: "Debes completar todos los campos.",
+            duration: 3000
+        }).showToast();
         return;
     }
 
     try {
-        // Consulta al servidor
-        const response = await fetch(`${urlUsuarios}?correo=${correo}&password=${password}`);
-        const usuarios = await response.json();
+        // Obtener todos los usuarios
+        const usuarios = await getUsers();
 
-        // Verfica si hay concidencias 
-        if (usuarios.length > 0) {
-            const usuario = usuarios[0];
-            
-        // Guarda en el local storage
-            localStorage.setItem("usuarioCorreo", usuario.correo);
-            
-        // Redirige a la página principal
-            window.location.href = "formulario.html";
+        // Verificar si hay coincidencia
+        const usuario = usuarios.find(u => u.correo === email && u.password === pass);
+
+        if (usuario) {
+            window.location.href = "formulario.html"; // Si hay coincidencia, redirige
         } else {
             Toastify({
-                text: "This is a toast",
+                text: "Correo o contraseña incorrectos.",
                 duration: 3000
             }).showToast();
         }
     } catch (error) {
-        console.error("Error en la conexión:", error);
+        console.error("Error al obtener usuarios:", error);
         Toastify({
-            text: "Error con las credenciales",
+            text: "No se pudo conectar al servidor.",
             duration: 3000
         }).showToast();
     }
 });
-
