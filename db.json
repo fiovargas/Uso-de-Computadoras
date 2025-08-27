@@ -1,5 +1,39 @@
 {
-    "Usuarios":[
-        
-    ]
+  "Usuarios": [
+    {
+      "id": "898c",
+      "usuario": "fiorela",
+      "email": "fvargas2001fwd@gmail.com",
+      "password": "12345678",
+      "tipoUser": "estudiante"
+    },
+    {
+      "id": "97d9",
+      "usuario": "pedro",
+      "email": "pedro1fwd@gmail.com",
+      "password": "Pedro1234",
+      "tipoUser": "estudiante"
+    },
+    {
+      "id": "90c2",
+      "usuario": "nora",
+      "email": "nora2fwd@gmail.com",
+      "password": "nora1234",
+      "tipoUser": "estudiante"
+    },
+    {
+      "id": "bded",
+      "usuario": "Caleb",
+      "email": "caleb3fwd@gmail.com",
+      "password": "caleb1234",
+      "tipoUser": "estudiante"
+    },
+    {
+      "id": "c6b6",
+      "usuario": "Roger",
+      "email": "roger1fwd@gmail.com",
+      "password": "roger12345",
+      "tipoUser": "estudiante"
+    }
+  ]
 }
