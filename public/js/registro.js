@@ -33,7 +33,16 @@ if (password.value !== confirmarPassword.value) {
     const respuesta = await postUsers(Regis);
 
     console.log(respuesta);
+
+     Toastify({
+        text: "Registro guardado con exito",
+        duration: 3000
+    }).showToast();
+
+    return;
+
+       /*  usuario.value = "",
+        email.value = "",
+        password.value = "",
+        tipoUser.value = "" */
 });
-
-
-
