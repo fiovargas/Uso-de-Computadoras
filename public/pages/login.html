@@ -3,33 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Permisos</title>
-    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <title>Document</title>
 </head>
 <body>
 
-<div id="general">
-    <label id="name" for="name">Nombre</label>
-    <input id="name" type="text">
+    <h1>Iniciar Sesión</h1>
 
-    <label id="email" for="email">Correo</label>
-    <input id="email" type="email">
+    <div>
+        <label for="id">Correo:</label><br>
+        <input id="id" type="text" placeholder="email"><br><br>
 
-    <label id="password" for="password">Contraseña</label>
-    <input id="password" type="password">
+        <label for="contraseña">Contraseña:</label><br>
+        <input id="contraseña" type="password" placeholder="Escribe tu contraseña"><br><br>
+    
+        <button id="ingresar">Ingresar</button>
 
-    <label id="confirmarPassword" for="confirmarPassword">Confirmar contraseña</label>
-    <input id="confirmarPassword" type="password">
-
-<select id="Registro">
-    <option value="" disabled selected>Seleccione el tipo de usuario</option>
-    <option id="estudiante" value="estudiante">Estudiante</option>
-    <option id="administrador" value="administrador">Administrador</option>
-</select>
-
-    <button id="registrarse" type="submit">Registrarse</button>
-</div>
-
+    </div>
 
     <script type="module" src="../js/login.js"></script>
 </body>
