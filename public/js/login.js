@@ -6,10 +6,9 @@ const ingresar = document.getElementById("ingresar")
 
 ingresar.addEventListener("click",async function () {
 const email = correo.value.trim();
-    const pass = contraseña.value.trim();
+const pass = contraseña.value.trim();
 
-    // Validar campos vacíos
-    if (!email || !pass) {
+    if (!email || !pass) { // Validar campos vacíos
         Toastify({
             text: "Debes completar todos los campos.",
             duration: 3000
@@ -22,10 +21,10 @@ const email = correo.value.trim();
         const usuarios = await getUsers();
 
         // Verificar si hay coincidencia
-        const usuario = usuarios.find(u => u.correo === email && u.password === pass);
+        const usuario = usuarios.find(user => user.email === email && user.password === pass);
 
         if (usuario) {
-            window.location.href = "formulario.html"; // Si hay coincidencia, redirige
+            window.location.href = "../pages/formulario.html"; // Si hay coincidencia, redirige
         } else {
             Toastify({
                 text: "Correo o contraseña incorrectos.",

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sistema de Permisos</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../style/login.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -12,18 +12,44 @@
 </head>
 <body>
 
-    <h1>Iniciar Sesión</h1>
+<div id="general"> 
 
-    <div>
-        <label for="correo">Correo:</label><br>
-        <input id="correo" type="text" placeholder="email"><br><br>
+    <div id="encabezado"> <!--Inicio de encabezado-->
+
+        <div id="logoyNombre">
+
+            <img id="logo" src="../imagenes/Logo.png" alt=""> 
+            <h1 id="institucion">Forward Costa Rica</h1>
+            <br><br>
+        
+        </div>
+
+    </div> <!--Fin de encabezado-->
+
+    <div id="login">
+
+        <h3>Iniciar Sesión</h3> <br><br>
+
+        <label for="correo">Correo Electrónico:</label><br>
+        <input id="correo" type="text" placeholder="ej: maria@gmail.com"><br><br>
 
         <label for="contraseña">Contraseña:</label><br>
-        <input id="contraseña" type="password" placeholder="Escribe tu contraseña"><br><br>
+        <input id="contraseña" type="password" placeholder="Ingrese tu contraseña"><br><br>
     
         <button id="ingresar">Ingresar</button>
 
     </div>
+
+    <footer id="piePagina">
+
+        <hr>
+        
+        <p>🎓 Educación de calidad · 🌎 Conectados con el mundo · 💡 Inspirando líderes</p>
+        <p>©2025 Todos los derechos reservados</p>
+
+    </footer>
+
+</div> 
 
     <script type="module" src="../js/login.js"></script>
 </body>

@@ -34,6 +34,3 @@ if (password.value !== confirmarPassword.value) {
 
     console.log(respuesta);
 });
-
-
-
