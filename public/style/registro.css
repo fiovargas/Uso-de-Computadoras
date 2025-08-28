@@ -131,14 +131,19 @@ body{
     color: white;
 }
 
+.link{
+    color: rgb(2, 129, 233);
+    font-size: 20px;
+}
+
 /* //////////////////////////////// botón de registrarse //////////////////////////////// */
 
 #registrarse{
-width: 100%;
-background: #1f53c5;
-border: none;
-padding: 12px;
-color: white;
-margin: 16px 0;
-font-size: 16px;
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
 }
