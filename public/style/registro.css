@@ -8,6 +8,58 @@ body{
     background-image: url(https://images4.alphacoders.com/667/667235.jpg);
 }
 
+/* //////////////////////////////// Encabezado //////////////////////////////// */
+
+#encabezado {
+    background: #f8f9fc;
+    padding: 20px 40px;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    overflow: visible; 
+}
+
+#logoyNombre {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px;
+}
+
+#logo {
+    height: 120px;
+}
+
+#institucion {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0a1f44;
+    margin: 0;
+}
+#piePagina {
+    background: #f8f9fc;
+    color: #0a1f44;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+#piePagina hr {
+    border: none;
+    border-top: 1px solid rgba(10,31,68,0.2);
+    margin-bottom: 10px;
+}
+
+#piePagina p {
+    margin: 6px 0;
+    font-weight: 500;
+}
+
+/* //////////////////////////////// Caja de registro //////////////////////////////// */
+
 #Registro{
     width: 400px;
     background-color: #24303c;
@@ -79,6 +131,8 @@ body{
     font-size: 18px;
     color: white;
 }
+
+/* //////////////////////////////// botón de registrarse //////////////////////////////// */
 
 #registrarse{
 width: 100%;

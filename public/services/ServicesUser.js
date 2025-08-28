@@ -7,7 +7,6 @@ async function getUsers() { //Función para Get
             headers :{
                 'Content-Type': 'application/json'
             }
-                    
         })
 
         const users = await response.json()
@@ -104,3 +103,4 @@ async function putUsers(Usuarios,id) { //Función para put
 }
 
 export{putUsers}
+
