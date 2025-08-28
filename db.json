@@ -41,42 +41,6 @@
       "usuario": "Carlos",
       "email": "carlos123@gmail.com",
       "password": "1234567"
-    },
-    {
-      "id": "a765",
-      "usuario": "fiorela",
-      "email": "fvargas2001fwd@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": "c9f2",
-      "usuario": "fiorela",
-      "email": "fvargas2001fwd@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": "d5c4",
-      "usuario": "fiorela",
-      "email": "fvargas2001fwd@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": "786c",
-      "usuario": "fiorelaa",
-      "email": "fvargas20fwd@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": "adea",
-      "usuario": "tdryrtyrty",
-      "email": "ytrtrtyry",
-      "password": "123456789"
-    },
-    {
-      "id": "01c8",
-      "usuario": "fio",
-      "email": "fvargas201fwd@gmail.com",
-      "password": "12345"
     }
   ]
 }
