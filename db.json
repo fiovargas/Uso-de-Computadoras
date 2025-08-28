@@ -44,27 +44,27 @@
     },
     {
       "id": "4583",
-      "usuario": "Carlos Rojas",
+      "usuario": "Carlos",
       "email": "carlos123@gmail.com",
       "password": "1234567",
       "tipoUser": "estudiante"
     },
     {
-      "id": "ff94",
-      "usuario": "Fiorela Vargas ",
-      "email": "fvargas2001fwd@gmail.com",
-      "password": "1234567",
+      "id": "958c",
+      "usuario": "nora",
+      "email": "nora12@gmail.com",
+      "password": "12345",
       "tipoUser": "estudiante"
     },
     {
-      "id": "598c",
-      "usuario": "fiorela",
+      "id": "8c3b",
+      "usuario": "fio",
       "email": "fvargas2001fwd@gmail.com",
-      "password": "123456",
+      "password": "1234",
       "tipoUser": "estudiante"
     },
     {
-      "id": "3185",
+      "id": "c238",
       "usuario": "fio",
       "email": "fvargas2001fwd@gmail.com",
       "password": "123456",
