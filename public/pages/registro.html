@@ -5,28 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de registro</title>
     <link rel="stylesheet" href="../style/registro.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
 
+<div id="encabezado"> <!--Inicio de encabezado-->
+
+    <div id="logoyNombre">
+
+        <img id="logo" src="https://static.wixstatic.com/media/aaad85_0e3cbfaf66104f0ca5c6959ed8b5a95c~mv2.png" alt=""
+        
+        <h1 id="institucion">Forward Costa Rica</h1>
+
+        <br><br>
     
+    </div>
+
+</div> <!--Fin de encabezado-->
 
 <div id="Registro">
 
-    <h4>Formulario de registro</h4>
+    <h2>Formulario de registro</h2>
+<br>
 
-    <label for="name">Nombre:</label>
-    <input id="name" type="text">
+    <label for="name">Nombre completo:</label>
+    <input id="name" type="text" placeholder="Ingrese su nombre completo">
 
-    <label for="email">Correo:</label>
-    <input id="email" type="email">
+    <label for="email">Correo electrónico:</label>
+    <input id="email" type="email" placeholder="Ej: maria@gmail.com">
 
     <label for="password">Contraseña:</label>
-    <input id="password" type="password">
+    <input id="password" type="password" placeholder="Ingrese su contraseña">
 
     <label for="confirmarPassword">Confirmar contraseña:</label>
-    <input id="confirmarPassword" type="password">
+    <input id="confirmarPassword" type="password" placeholder="Confirme su contraseña">
 
-<select >
+<select class="select" id="seleccionador">
     <option value="" disabled selected>Seleccione el tipo de usuario</option>
     <option id="estudiante" value="estudiante">Estudiante</option>
     <option id="administrador" value="administrador">Administrador</option>
@@ -35,6 +50,11 @@
     <button id="registrarse" type="submit">Registrarse</button>
 </div>
 
+<footer id="piePagina">
+    <hr>
+    <p>🎓 Educación de calidad · 🌎 Conectados con el mundo · 💡 Inspirando líderes</p>
+    <p>©2025 Todos los derechos reservados</p>
+</footer>
 
     <script type="module" src="../js/registro.js"></script>
 </body>

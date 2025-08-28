@@ -1,3 +1,5 @@
+/* //////////////////////////////// Cuerpo //////////////////////////////// */
+
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +19,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+/* //////////////////////////////// Encabezado //////////////////////////////// */
 
 #encabezado {
     background: #e3ebf5;;
@@ -47,11 +51,13 @@ body {
     margin: 0;
 }
 
+/* //////////////////////////////// Cuadro de login //////////////////////////////// */
+
 #login {
  width: 400px;
     background-color: #2a3b4e; 
     padding: 30px;
-    margin: 100px auto 60px auto;
+    margin: 60px auto 60px auto;
     border-radius: 8px; 
     font-family: 'calibri';
     color: white;
@@ -68,7 +74,7 @@ h3 {
 #login label {
     font-weight: 600;
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #login input {
@@ -76,7 +82,7 @@ h3 {
     background: #24303c;
     padding: 10px;
     border-radius: 4px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     border: 1px solid #1f53c5;
     font-family: 'calibri';
     font-size: 18px;
@@ -94,7 +100,7 @@ h3 {
     border: none;
     padding: 12px;
     color: white;
-    margin: 16px 0;
+    margin: 10px 0;
     font-size: 16px;;
 }
 
@@ -102,6 +108,8 @@ h3 {
     background-color: #163c73;
     transform: scale(1.02);
 }
+
+/* //////////////////////////////// Footer //////////////////////////////// */
 
 #piePagina {
     background: #f8f9fc;

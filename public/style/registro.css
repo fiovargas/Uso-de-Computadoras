@@ -4,8 +4,64 @@
     box-sizing: border-box ;
 }
 
+body{
+    background-image: url(https://images4.alphacoders.com/667/667235.jpg);
+}
+
+/* //////////////////////////////// Encabezado //////////////////////////////// */
+
+#encabezado {
+    background: #f8f9fc;
+    padding: 20px 40px;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    overflow: visible; 
+}
+
+#logoyNombre {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px;
+}
+
+#logo {
+    height: 120px;
+}
+
+#institucion {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0a1f44;
+    margin: 0;
+}
+#piePagina {
+    background: #f8f9fc;
+    color: #0a1f44;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+#piePagina hr {
+    border: none;
+    border-top: 1px solid rgba(10,31,68,0.2);
+    margin-bottom: 10px;
+}
+
+#piePagina p {
+    margin: 6px 0;
+    font-weight: 500;
+}
+
+/* //////////////////////////////// Caja de registro //////////////////////////////// */
+
 #Registro{
-    width: 400%;
+    width: 400px;
     background-color: #24303c;
     padding: 30px;
     margin: auto;
@@ -13,15 +69,77 @@
     border-radius: 4px;
     font-family: 'calibri';
     color: white;
+    box-shadow: 7px 13px 37px #000;
 }
 
-#name, email, password, confirmarPassword{
+#name{
     width: 100%;
     background: #24303c;
-    padding: 10%;
-    border-radius: 4%;
+    padding: 10px;
+    border-radius: 4px;
     margin-bottom: 16px;
     border: 1px solid #1f53c5;
     font-family: 'calibri';
     font-size: 18px;
+    color: white;
+}
+
+#email{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+#password{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+#confirmarPassword{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.select{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+/* //////////////////////////////// botón de registrarse //////////////////////////////// */
+
+#registrarse{
+width: 100%;
+background: #1f53c5;
+border: none;
+padding: 12px;
+color: white;
+margin: 16px 0;
+font-size: 16px;
 }
