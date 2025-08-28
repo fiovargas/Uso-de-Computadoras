@@ -1,0 +1,132 @@
+/* //////////////////////////////// Cuerpo //////////////////////////////// */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #dfe7f3;
+    background-image: url(https://images4.alphacoders.com/667/667235.jpg);
+    color: #222;
+}
+
+#general {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* //////////////////////////////// Encabezado //////////////////////////////// */
+
+#encabezado {
+    background: #e3ebf5;;
+    padding: 20px 40px;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    overflow: visible; 
+}
+
+#logoyNombre {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px;
+}
+
+#logo {
+    height: 120px;
+}
+
+#institucion {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0a1f44;
+    margin: 0;
+}
+
+/* //////////////////////////////// Cuadro de login //////////////////////////////// */
+
+#login {
+ width: 400px;
+    background-color: #2a3b4e; 
+    padding: 30px;
+    margin: 60px auto 60px auto;
+    border-radius: 8px; 
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    position: relative;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    color:white;
+}
+
+#login label {
+    font-weight: 600;
+    display: block;
+    margin-top: 5px;
+}
+
+#login input {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;;
+}
+
+#login input:focus {
+    border-color: #00aaff;
+    outline: none;
+}
+
+#ingresar {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 10px 0;
+    font-size: 16px;;
+}
+
+#ingresar:hover {
+    background-color: #163c73;
+    transform: scale(1.02);
+}
+
+/* //////////////////////////////// Footer //////////////////////////////// */
+
+#piePagina {
+    background: #f8f9fc;
+    color: #0a1f44;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+#piePagina hr {
+    border: none;
+    border-top: 1px solid rgba(10,31,68,0.2);
+    margin-bottom: 10px;
+}
+
+#piePagina p {
+    margin: 6px 0;
+    font-weight: 500;
+}

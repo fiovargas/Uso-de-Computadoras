@@ -31,7 +31,7 @@ const emailExistente = usuariosExistentes.find(user => user.email === email.valu
         return;
     }
 
-// Verificamos si el nombre de usuario ya está registrado        
+// Verificamos si el nombre de usuario ya está registrado.        
 const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === usuario.value);
     if (nombreUsuarioExistente) {
         Toastify({
@@ -43,6 +43,14 @@ const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === 
 
     if (usuario.value === "" || email.value === "" ||  password.value === "") {
         console.log("Los datos están incompletos");
+
+        Toastify({
+            text: "Los datos están incompletos",
+            duration: 3000
+        }).showToast();
+        return;
+
+
     } else{
         // Creamos un objeto con los datos ingresados.
         const Regis = {
@@ -52,6 +60,10 @@ const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === 
         };
 
         console.log(Regis); // Podemos ver en consola los datos a enviar
+
+     setTimeout(() => {
+        window.location.href = "../pages/login.html";
+    }, 1000);
 
         // Enviamos los datos al backend usando la función postUsers().
         const respuesta = await postUsers(Regis);
@@ -71,11 +83,14 @@ const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === 
             }, 1000);
 
     }
-})
+});
+
+
 // Función para limpiar los campos del formulario después del registro.
 function limpiarCampos() {
     usuario.value = "";
     email.value = "";
     password.value = "";
     confirmarPassword.value = "";
-}
+};
+
