@@ -34,6 +34,41 @@
       "email": "roger1fwd@gmail.com",
       "password": "roger12345",
       "tipoUser": "estudiante"
+    },
+    {
+      "id": "f430",
+      "usuario": "steven",
+      "email": "salas123@gmail.com",
+      "password": "123456789",
+      "tipoUser": "administrador"
+    },
+    {
+      "id": "4583",
+      "usuario": "Carlos Rojas",
+      "email": "carlos123@gmail.com",
+      "password": "1234567",
+      "tipoUser": "estudiante"
+    },
+    {
+      "id": "ff94",
+      "usuario": "Fiorela Vargas ",
+      "email": "fvargas2001fwd@gmail.com",
+      "password": "1234567",
+      "tipoUser": "estudiante"
+    },
+    {
+      "id": "598c",
+      "usuario": "fiorela",
+      "email": "fvargas2001fwd@gmail.com",
+      "password": "123456",
+      "tipoUser": "estudiante"
+    },
+    {
+      "id": "3185",
+      "usuario": "fio",
+      "email": "fvargas2001fwd@gmail.com",
+      "password": "123456",
+      "tipoUser": "estudiante"
     }
   ]
 }

@@ -1,13 +1,11 @@
 import{getUsers, postUsers, deleteUsers, putUsers} from "../services/ServicesUser.js"
 
-const usuario = document.getElementById("usuario");
+const usuario = document.getElementById("name");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const confirmarPassword = document.getElementById("confirmarPassword");
-const tipoUser = document.getElementById("tipoUser");
-const estudiante = document.getElementById("estudiante");
-const administrador = document.getElementById("administrador");
 const registrarse = document.getElementById("registrarse");
+const seleccionador = document.getElementById("seleccionador");
 
 
 registrarse.addEventListener("click", async function () {
@@ -20,12 +18,13 @@ if (password.value !== confirmarPassword.value) {
 
     return;
 };
-
+    console.log(seleccionador.value);
+    
     const Regis = {
         usuario:usuario.value,
         email:email.value,
         password:password.value,
-        tipoUser:tipoUser.value
+        tipoUser:seleccionador.value
     };
 
     console.log(Regis);
@@ -39,10 +38,17 @@ if (password.value !== confirmarPassword.value) {
         duration: 3000
     }).showToast();
 
-    return;
+    limpiarCampos();
 
-       /*  usuario.value = "",
-        email.value = "",
-        password.value = "",
-        tipoUser.value = "" */
+    setTimeout(() => {
+        window.location.href = "../pages/login.html";
+    }, 3000);
 });
+
+function limpiarCampos() {
+    usuario.value = "";
+    email.value = "";
+    password.value = "";
+    confirmarPassword.value = "";
+    seleccionador.value = "";
+};
