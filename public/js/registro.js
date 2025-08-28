@@ -6,8 +6,6 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const confirmarPassword = document.getElementById("confirmarPassword");
 const registrarse = document.getElementById("registrarse");
-const seleccionador = document.getElementById("seleccionador");
-
 
 registrarse.addEventListener("click", async function () {
 
@@ -20,7 +18,6 @@ if (password.value !== confirmarPassword.value) {
 
     return; // Si no coinciden, detenemos el registro.
 };
-    console.log(seleccionador.value);
     
     // Creamos un objeto con los datos ingresados.
     const Regis = {
@@ -56,5 +53,4 @@ function limpiarCampos() {
     email.value = "";
     password.value = "";
     confirmarPassword.value = "";
-    seleccionador.value = "";
 };
