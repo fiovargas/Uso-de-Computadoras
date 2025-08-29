@@ -24,6 +24,9 @@ const pass = contraseña.value.trim();
         const usuario = usuarios.find(user => user.email === email && user.password === pass);
 
         if (usuario) {
+
+            enviar_info_usuario_localstorage
+
             window.location.href = "../pages/formulario.html"; // Si hay coincidencia, redirige
 
             limpiarCampos();
@@ -44,5 +47,6 @@ const pass = contraseña.value.trim();
 });
 
 function limpiarCampos() {
-   
+   correo.value.trim();
+   contraseña.value.trim();
 };

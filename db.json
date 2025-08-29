@@ -6,6 +6,17 @@
       "email": "nora2fwd@gmail.com",
       "password": "nora1234",
       "typeUser": "admin"
+    },
+    {
+      "id": "fa46",
+      "usuario": "steveN",
+      "email": "gsl@gamil.com",
+      "password": "123456789",
+      "typeUser": "estudiante"
     }
+  ],
+  
+  "Solicitudes":[
+
   ]
 }

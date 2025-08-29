@@ -1,4 +1,4 @@
-const siguiente = document.getElementById("Siguente");
+const Siguiente = document.getElementById("Siguente");
 const usuario = document.getElementById("usuario");
 const sede = document.getElementById("sede");
 const salida = document.getElementById("salida");
@@ -11,9 +11,18 @@ Siguiente.addEventListener("click", function() {
     const valorSede = sede.value;
     const valorSalida = salida.value;
     const valorRegreso = regreso.value;
-    const valorCodigo = codigo.value.trim();
+    const valorCodigo = codigosede.value.value.trim();
 
     if (valorusuario && valorSede && valorSalida && valorRegreso && valorCodigo) {
+
+        const formu = {
+            idSolicitante: id_usuario_localstorage,
+            sede: valorSede,
+            fecha_salida: valorSalida,
+            fecha_entrada: valorRegreso,
+            cod_pc: valorCodigo
+        }
+
         Toastify({
             text: "Formulario guardado con exito",
             duration: 3000
