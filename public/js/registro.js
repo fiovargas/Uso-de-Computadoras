@@ -57,6 +57,7 @@ const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === 
             usuario:usuario.value,
             email:email.value,
             password:password.value,
+            typeUser: "estudiante"
         };
 
         console.log(Regis); // Podemos ver en consola los datos a enviar
