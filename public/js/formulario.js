@@ -6,6 +6,7 @@ const regreso = document.getElementById("regreso");
 const codigo = document.getElementById("codigo");
 
 siguiente.addEventListener("click", function() {
+
     const valorID = id.value.trim();
     const valorSede = sede.value;
     const valorSalida = salida.value;
@@ -14,9 +15,11 @@ siguiente.addEventListener("click", function() {
 
     if (valorID && valorSede && valorSalida && valorRegreso && valorCodigo) {
         Toastify({
-            text: "Todos los campos fueron llenados con éxito",
+            text: "Formulario guardado con exito",
             duration: 3000
         }).showToast();
+
+        limpiarCampos();
 
         setTimeout(() => {
         window.location.href = "../pages/condiciones.html";
@@ -24,7 +27,7 @@ siguiente.addEventListener("click", function() {
 
     } else {
         Toastify({
-            text: "Error: Todos los campos deben ser llenados",
+            text: "Los datos están incompletos",
             duration: 3000
         }).showToast();  
     }
