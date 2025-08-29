@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body{
+    background-image: url(https://images4.alphacoders.com/667/667235.jpg);
+}
+
+
+.condiciones{
+    width: 875px;
+    background-color: #24303c;
+    padding: 45px;
+    margin: 60px auto 60px auto; 
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    font-size: 20px;
+}
+
+.aceptar{
+    height: 25px;
+    font-size: 30px;
+}
+
+#btnEnviar{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 20px;
+}
+
