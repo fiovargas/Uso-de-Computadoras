@@ -41,6 +41,12 @@
       "usuario": "Carlos",
       "email": "carlos123@gmail.com",
       "password": "1234567"
+    },
+    {
+      "id": "9ed5",
+      "usuario": "Nora",
+      "email": "ana@gmail.com",
+      "password": "1234"
     }
   ]
 }
