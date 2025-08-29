@@ -1,77 +1,11 @@
 {
   "Usuarios": [
     {
-      "id": "898c",
-      "usuario": "fiorela",
-      "email": "fvargas2001fwd@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": "97d9",
-      "usuario": "pedro",
-      "email": "pedro1fwd@gmail.com",
-      "password": "Pedro1234"
-    },
-    {
       "id": "90c2",
       "usuario": "nora",
       "email": "nora2fwd@gmail.com",
-      "password": "nora1234"
-    },
-    {
-      "id": "bded",
-      "usuario": "Caleb",
-      "email": "caleb3fwd@gmail.com",
-      "password": "caleb1234"
-    },
-    {
-      "id": "c6b6",
-      "usuario": "Roger",
-      "email": "roger1fwd@gmail.com",
-      "password": "roger12345"
-    },
-    {
-      "id": "f430",
-      "usuario": "steven",
-      "email": "salas123@gmail.com",
-      "password": "123456789"
-    },
-    {
-      "id": "4583",
-      "usuario": "Carlos",
-      "email": "carlos123@gmail.com",
-      "password": "1234567"
-    },
-    {
-      "id": "9ed5",
-      "usuario": "Nora",
-      "email": "ana@gmail.com",
-      "password": "1234"
-    },
-
-    {
-      "id": "7cba",
-      "usuario": "Martha123",
-      "email": "Martha123fwd@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "9b23",
-      "usuario": "fiore",
-      "email": "fvargas20fwd@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "141c",
-      "usuario": "dylan ",
-      "email": "adfghj",
-      "password": "1234"
-    },
-    {
-      "id": "5479",
-      "usuario": "fio",
-      "email": "vargas2001fwd@gmail.com",
-      "password": "12345"
+      "password": "nora1234",
+      "typeUser": "admin"
     }
   ]
 }

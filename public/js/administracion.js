@@ -2,6 +2,9 @@ const inicio = document.getElementById("inicio");
 const historial = document.getElementById("historial");
 const aprobacion = document.getElementById("aprobacion");
 const registroAdmi = document.getElementById("registroAdmi");
+const historialContenedor = document.getElementById("historialContenedor")
+const contenido = document.getElementById("contenido")
+const inicioContenedor = document.getElementById("inicioContenedor")
 const cerrar = document.getElementById("cerrar");
 
 // Funciones de redirección
@@ -10,7 +13,12 @@ inicio.addEventListener("click", () => {
 });
 
 historial.addEventListener("click", () => {
-    window.location.href = "../pages/historial.html";
+    /* window.location.href = "../pages/historial.html"; */
+    inicioContenedor.textContent = ""
+    historialContenedor.style.display = "block"
+
+    
+
 });
 
 aprobacion.addEventListener("click", () => {
