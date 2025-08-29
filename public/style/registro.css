@@ -41,6 +41,14 @@ body{
     margin: 0;
 }
 
+#piePagina {
+    background: #f8f9fc;
+    color: #0a1f44;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
 
 #piePagina hr {
     border: none;

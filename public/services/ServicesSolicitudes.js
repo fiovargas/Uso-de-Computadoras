@@ -11,9 +11,9 @@ async function postSolicitudes(Solicitudes) { //Función para Post
                     
         })
 
-        const Solicitudes = await response.json()
+        const Solicitud = await response.json()
 
-        return Solicitudes    
+        return Solicitud   
         
     } catch (error) {
 

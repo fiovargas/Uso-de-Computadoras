@@ -1,37 +1,52 @@
-const Siguiente = document.getElementById("Siguente");
-const usuario = document.getElementById("usuario");
+import { postSolicitudes } from "../services/ServicesSolicitudes.js";
+
+const Siguiente = document.getElementById("Siguiente");
 const sede = document.getElementById("sede");
 const salida = document.getElementById("salida");
 const regreso = document.getElementById("regreso");
 const codigo = document.getElementById("codigo");
 
-Siguiente.addEventListener("click", function() {
+// Obtener el usuario automáticamente desde localStorage
+const id_usuario_localstorage = localStorage.getItem("id_usuario");
 
-    const valorusuario = usuario.value.trim();
+
+Siguiente.addEventListener("click", async function() {
     const valorSede = sede.value;
     const valorSalida = salida.value;
     const valorRegreso = regreso.value;
-    const valorCodigo = codigosede.value.value.trim();
+    const valorCodigo = codigo.value.trim();
 
-    if (valorusuario && valorSede && valorSalida && valorRegreso && valorCodigo) {
+    if (valorSede && valorSalida && valorRegreso && valorCodigo) {
+        
+        // Validar fechas
+        if (new Date(valorSalida) >= new Date(valorRegreso)) {
+            Toastify({
+                text: "La fecha de regreso debe ser posterior a la de salida",
+                duration: 3000
+            }).showToast();
+            return;
+        }
 
         const formu = {
-            idSolicitante: id_usuario_localstorage,
+            idSolicitante: id_usuario_localstorage, // viene de localStorage
             sede: valorSede,
             fecha_salida: valorSalida,
             fecha_entrada: valorRegreso,
             cod_pc: valorCodigo
         }
+        
+        const respuestaSoli  = await postSolicitudes(formu)
+
+        console.log(respuestaSoli);
+        
 
         Toastify({
-            text: "Formulario guardado con exito",
+            text: "Formulario guardado con éxito",
             duration: 3000
         }).showToast();
 
-        limpiarCampos();
-
         setTimeout(() => {
-        window.location.href = "../pages/condiciones.html";
+            window.location.href = "../pages/condiciones.html";
         }, 2000);
 
     } else {

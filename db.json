@@ -13,10 +13,23 @@
       "email": "gsl@gamil.com",
       "password": "123456789",
       "typeUser": "estudiante"
+    },
+    {
+      "id": "4f93",
+      "usuario": "fio",
+      "email": "fvargas2001fwd@gmail.com",
+      "password": "1234567",
+      "typeUser": "estudiante"
     }
   ],
-  
-  "Solicitudes":[
-
+  "Solicitudes": [
+    {
+      "id": "57e9",
+      "idSolicitante": "4f93",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-08-07",
+      "fecha_entrada": "2025-08-14",
+      "cod_pc": "nhnhdngfd"
+    }
   ]
 }

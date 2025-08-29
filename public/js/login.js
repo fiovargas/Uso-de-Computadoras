@@ -1,12 +1,12 @@
 import { getUsers } from "../services/ServicesUser.js";
 
-const correo = document.getElementById("correo")
-const contraseña = document.getElementById("contraseña")
-const ingresar = document.getElementById("ingresar")
+const correo = document.getElementById("correo");
+const contraseña = document.getElementById("contraseña");
+const ingresar = document.getElementById("ingresar");
 
-ingresar.addEventListener("click",async function () {
-const email = correo.value.trim();
-const pass = contraseña.value.trim();
+ingresar.addEventListener("click", async function () {
+    const email = correo.value.trim();
+    const pass = contraseña.value.trim();
 
     if (!email || !pass) { // Validar campos vacíos
         Toastify({
@@ -24,12 +24,21 @@ const pass = contraseña.value.trim();
         const usuario = usuarios.find(user => user.email === email && user.password === pass);
 
         if (usuario) {
+            // Guardar datos del usuario en localStorage
+            localStorage.setItem("id_usuario", usuario.id);
+            localStorage.setItem("nombre_usuario", usuario.usuario);
+            localStorage.setItem("typeUser", usuario.typeUser);
 
-            enviar_info_usuario_localstorage
-
-            window.location.href = "../pages/formulario.html"; // Si hay coincidencia, redirige
+            Toastify({
+                text: "Ingreso exitoso",
+                duration: 3000
+            }).showToast();
 
             limpiarCampos();
+
+            setTimeout(() => {
+                window.location.href = "../pages/formulario.html"; 
+            }, 1500);
 
         } else {
             Toastify({
@@ -47,6 +56,6 @@ const pass = contraseña.value.trim();
 });
 
 function limpiarCampos() {
-   correo.value.trim();
-   contraseña.value.trim();
-};
+    correo.value = "";
+    contraseña.value = "";
+}
