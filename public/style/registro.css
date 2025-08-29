@@ -1,3 +1,5 @@
+/* //////////////////////////////// Cuerpo //////////////////////////////// */
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ body{
     background-image: url(https://images4.alphacoders.com/667/667235.jpg);
 }
 
-/* //////////////////////////////// Encabezado //////////////////////////////// */
+/* //////////////////////////////// Encabezado y footer //////////////////////////////// */
 
 #encabezado {
     background: #f8f9fc;
@@ -55,7 +57,7 @@ body{
 
 #piePagina p {
     margin: 6px 0;
-    font-weight: 500;
+    font-weight:500;
 }
 
 /* //////////////////////////////// Caja de registro //////////////////////////////// */

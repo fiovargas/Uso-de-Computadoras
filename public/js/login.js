@@ -25,6 +25,9 @@ const pass = contraseña.value.trim();
 
         if (usuario) {
             window.location.href = "../pages/formulario.html"; // Si hay coincidencia, redirige
+
+            limpiarCampos();
+
         } else {
             Toastify({
                 text: "Correo o contraseña incorrectos.",
@@ -39,3 +42,7 @@ const pass = contraseña.value.trim();
         }).showToast();
     }
 });
+
+function limpiarCampos() {
+   
+};

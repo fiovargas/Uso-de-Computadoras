@@ -10,7 +10,7 @@ body{
     background-image: url(https://images4.alphacoders.com/667/667235.jpg);
 }
 
-/* //////////////////////////////// Encabezado y footer //////////////////////////////// */
+/* //////////////////////////////// Encabezado Y footer //////////////////////////////// */
 
 #encabezado {
     background: #f8f9fc;
@@ -61,7 +61,9 @@ body{
 }
 
 
-.condiciones{
+
+
+.cajaInicio{
     width: 875px;
     background-color: #24303c;
     padding: 45px;
@@ -73,18 +75,21 @@ body{
     font-size: 20px;
 }
 
-.aceptar{
-    height: 25px;
-    font-size: 30px;
+.h1{
+    font-size: 50px;
 }
 
-#btnEnviar{
-    width: 100%;
+.letra{
+    font-size: 25px;
+}
+
+#Siguiente{
     background: #1f53c5;
     border: none;
     padding: 12px;
     color: white;
-    margin: 16px 0;
-    font-size: 20px;
+    margin: 2px 0;
+    font-size: 16px; 
+    float: right;
+    margin-right: 20px ;
 }
-

@@ -5,7 +5,7 @@ const salida = document.getElementById("salida");
 const regreso = document.getElementById("regreso");
 const codigo = document.getElementById("codigo");
 
-siguiente.addEventListener("click", function() {
+Siguiente.addEventListener("click", function() {
 
     const valorusuario = usuario.value.trim();
     const valorSede = sede.value;
