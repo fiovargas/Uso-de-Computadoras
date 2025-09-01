@@ -1,3 +1,5 @@
+import { getSolicitudes, patchSolicitudes } from "../services/ServicesSolicitudes.js";
+
 //Constantes de menú
 const inicio = document.getElementById("inicio");
 const historial = document.getElementById("historial");
@@ -10,7 +12,9 @@ const inicioContenedor = document.getElementById("inicioContenedor")
 const historialContenedor = document.getElementById("historialContenedor")
 const pendientesContenedor = document.getElementById("pendientesContenedor")
 const registroContenedor = document.getElementById("registroContenedor")
-//Botón de registro de nuevo administrador
+//Constantes para menú pendientes
+const listaTabla = document.getElementById("listaPendientes")
+//Constantes para menú registro
 const registrarse = document.getElementById("registrarse");
 
 function ocultarTodo() {
@@ -22,7 +26,7 @@ function ocultarTodo() {
 
 ///////Comienza Menú Inicio///////
 inicio.addEventListener("click", () => { 
-  ocultarTodo();
+  ocultarTodo();    
   inicioContenedor.classList.remove("oculto");
 
 });
@@ -39,11 +43,94 @@ historial.addEventListener("click", () => {
 
 
 ///////Comienza Menú pendientes///////
-pendientes.addEventListener("click", () => { 
+pendientes.addEventListener("click", async () => { 
     ocultarTodo();
     pendientesContenedor.classList.remove("oculto");
+
+     try {
+        const todasSolicitudes = await getSolicitudes();
+
+        // Filtrar solicitudes pendientes
+        const pendientesList = todasSolicitudes.filter(solicitud => solicitud.estado === "pendiente");
+
+        // Mostrar en pantalla
+        mostrarSolicitudesPendientes(pendientesList);
+        console.log(pendientesList);
+        
+
+    } catch (error) {
+        console.error("Error al obtener solicitudes:", error);
+        Toastify({
+            text: "Error al cargar solicitudes pendientes",
+            duration: 3000
+        }).showToast();
+    }
+
 });
-///////Termina Menú Historial///////
+
+function mostrarSolicitudesPendientes(lista) {
+            listaTabla.innerHTML = ""; // limpiar antes de mostrar
+
+    lista.forEach(solicitud => {
+        const fila = document.createElement("tr");
+
+        fila.innerHTML = `
+            <td>${solicitud.idSolicitante}</td>
+            <td>${solicitud.sede}</td>
+            <td>${solicitud.fecha_salida}</td>
+            <td>${solicitud.fecha_entrada}</td>
+            <td>${solicitud.cod_pc}</td>
+            <td>
+                <button type="button" class="aprobar">Aprobar</button>
+                <button type="button" class="denegar">Denegar</button>
+                <p class="id-solicitud" style="display:none">${solicitud.id}</p>
+            </td>
+        `;
+
+        listaTabla.appendChild(fila);
+    });
+
+    // Asignar eventos a los botones Aprobar
+    listaTabla.querySelectorAll(".aprobar").forEach(boton => {
+        boton.addEventListener("click", () => {
+            const idSolicitud = boton.parentElement.querySelector(".id-solicitud").textContent;
+            cambiarEstado(idSolicitud, "aprobada");
+        });
+    });
+
+    // Asignar eventos a los botones Denegar
+    listaTabla.querySelectorAll(".denegar").forEach(boton => {
+        boton.addEventListener("click", () => {
+            const idSolicitud = boton.parentElement.querySelector(".id-solicitud").textContent;
+            cambiarEstado(idSolicitud, "denegada");
+        });
+    });
+}
+
+// Función para cambiar el estado de una solicitud usando patchSolicitudes
+async function cambiarEstado(id, nuevoEstado) {
+        try {
+        await patchSolicitudes({ estado: nuevoEstado }, id);
+
+        Toastify({
+            text: `Solicitud ${nuevoEstado}`,
+            duration: 3000
+        }).showToast();
+
+        // Refrescar la lista de pendientes directamente sin hacer click
+        const todasSolicitudes = await getSolicitudes();
+        const pendientesList = todasSolicitudes.filter(solicitud => solicitud.estado === "pendiente");
+        mostrarSolicitudesPendientes(pendientesList);
+
+    } catch (error) {
+        console.error("Error al cambiar el estado de la solicitud:", error);
+        Toastify({
+            text: "Error al actualizar la solicitud",
+            duration: 3000
+        }).showToast();
+    }
+}
+///////Termina Menú Pendientes///////
 
 
 ///////Comienza Menú registro///////

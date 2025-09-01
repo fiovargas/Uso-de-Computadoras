@@ -251,3 +251,50 @@ main {
     background-color: #163c73;
     transform: scale(1.02);
 }
+
+/* //////////////////////////////// Menú Pendientes //////////////////////////////// */
+
+#tablaPendientes {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+#tablaPendientes th, #tablaPendientes td {
+    text-align: left;
+    padding: 8px;
+}
+
+#tablaPendientes th {
+    background-color: #f0f0f0;
+    position: sticky; 
+    top: 0;
+}
+
+#tablaPendientes tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+#tablaPendientes tr:hover {
+    background-color: #f2f2f2;
+}
+
+#tablaPendientes button {
+    margin-right: 5px;
+    padding: 4px 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#tablaPendientes button.denegar {
+    background-color: #f44336; 
+}
+
+#tablaPendientes button:hover {
+    opacity: 0.8;
+}

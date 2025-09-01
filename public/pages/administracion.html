@@ -46,8 +46,22 @@
         </div>
 
         <div id="pendientesContenedor" class="oculto"><!--Inicio de pendientes-->
-            2
-        
+            <h2>Solicitudes Pendientes</h2><br>
+            <table id="tablaPendientes">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Sede</th>
+                        <th>Salida</th>
+                        <th>Regreso</th>
+                        <th>Codigo PC</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="listaPendientes">
+                    <!-- Aquí se agregan las filas dinámicamente -->
+                </tbody>
+            </table>
         </div>
 
         <div id="registroContenedor" class="oculto"> <!--Inicio de registro-->
@@ -55,7 +69,7 @@
             <div id="Registro">
 
             <h2>Formulario de registro</h2>
-        <br>
+            <br>
 
             <label for="name">Nombre de usuario:</label>
             <input id="name" type="text" placeholder="Ingrese su nombre completo">
