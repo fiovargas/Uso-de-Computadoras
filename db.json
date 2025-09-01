@@ -75,6 +75,15 @@
       "fecha_entrada": "2025-09-03",
       "cod_pc": "hgf345",
       "estado": "aprobada"
+    },
+    {
+      "id": "c235",
+      "idSolicitante": "4f93",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-03",
+      "fecha_entrada": "2025-09-10",
+      "cod_pc": "123456",
+      "estado": "pendiente"
     }
   ]
 }
