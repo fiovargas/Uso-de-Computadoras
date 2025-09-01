@@ -30,6 +30,14 @@
       "fecha_salida": "2025-08-07",
       "fecha_entrada": "2025-08-14",
       "cod_pc": "nhnhdngfd"
+    },
+    {
+      "id": "adeb",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-01",
+      "fecha_entrada": "2025-09-02",
+      "cod_pc": "123456"
     }
   ]
 }
