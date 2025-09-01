@@ -234,13 +234,19 @@ registrarse.addEventListener("click", async function () {
 
     // Validar campos vacíos
     if (!nombre || !correo || !pass || !confirmarPass) {
-        Toastify({ text: "Debes completar todos los campos", duration: 3000 }).showToast();
+        Toastify({ 
+            text: "Debes completar todos los campos", 
+            duration: 3000 
+        }).showToast();
         return;
     }
 
     // Validar contraseñas iguales
     if (pass !== confirmarPass) {
-        Toastify({ text: "Las contraseñas no coinciden", duration: 3000 }).showToast();
+        Toastify({ 
+            text: "Las contraseñas no coinciden", 
+            duration: 3000 
+        }).showToast();
         return;
     }
 
@@ -249,7 +255,10 @@ registrarse.addEventListener("click", async function () {
         const usuarios = await getUsers();
         const existente = usuarios.find(user => user.email === correo);
         if (existente) {
-            Toastify({ text: "El correo ya está registrado", duration: 3000 }).showToast();
+            Toastify({ 
+                text: "El correo ya está registrado", 
+                duration: 3000 
+            }).showToast();
             return;
         }
 
@@ -263,7 +272,10 @@ registrarse.addEventListener("click", async function () {
 
         await postUsers(nuevoAdmin);
 
-        Toastify({ text: "Administrador registrado con éxito", duration: 3000 }).showToast();
+        Toastify({ 
+            text: "Administrador registrado con éxito", 
+            duration: 3000 
+        }).showToast();
 
         // Limpiar campos
         name.value = "";
@@ -273,7 +285,10 @@ registrarse.addEventListener("click", async function () {
 
     } catch (error) {
         console.error("Error al registrar admin:", error);
-        Toastify({ text: "No se pudo registrar el administrador", duration: 3000 }).showToast();
+        Toastify({ 
+            text: "No se pudo registrar el administrador", 
+            duration: 3000 
+        }).showToast();
     }
 });
 
