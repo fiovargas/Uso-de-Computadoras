@@ -32,7 +32,8 @@ Siguiente.addEventListener("click", async function() {
             sede: valorSede,
             fecha_salida: valorSalida,
             fecha_entrada: valorRegreso,
-            cod_pc: valorCodigo
+            cod_pc: valorCodigo,
+            estado: "pendiente"
         }
         
         const respuestaSoli  = await postSolicitudes(formu)
