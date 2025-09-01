@@ -1,4 +1,5 @@
 import { getSolicitudes, patchSolicitudes } from "../services/ServicesSolicitudes.js";
+import { getUsers, postUsers } from "../services/ServicesUser.js";
 
 //Constantes de menú
 const inicio = document.getElementById("inicio");
@@ -17,6 +18,10 @@ const registroContenedor = document.getElementById("registroContenedor")
 const listaTabla = document.getElementById("listaPendientes")
 //Constantes para menú registro
 const registrarse = document.getElementById("registrarse");
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const confirmarPassword = document.getElementById("confirmarPassword");
 //Constantes para menú historial
 const listaHistorial = document.getElementById("listaHistorial");
 const buscadorHistorial = document.getElementById("buscadorHistorial");
@@ -215,13 +220,63 @@ async function cambiarEstado(id, nuevoEstado) {
 
 ///////Comienza Menú registro///////
 registro.addEventListener("click", () => { 
-    /* ocultarTodo(); */
-    /* registroContenedor.classList.remove("oculto"); */
     inicioContenedor.style.display = "none"
     historialContenedor.style.display = "none"
     pendientesContenedor.style.display = "none"
     registroContenedor.style.display = "block"
+    
 });
+registrarse.addEventListener("click", async function () {
+    const nombre = name.value.trim();
+    const correo = email.value.trim();
+    const pass = password.value.trim();
+    const confirmarPass = confirmarPassword.value.trim();
+
+    // Validar campos vacíos
+    if (!nombre || !correo || !pass || !confirmarPass) {
+        Toastify({ text: "Debes completar todos los campos", duration: 3000 }).showToast();
+        return;
+    }
+
+    // Validar contraseñas iguales
+    if (pass !== confirmarPass) {
+        Toastify({ text: "Las contraseñas no coinciden", duration: 3000 }).showToast();
+        return;
+    }
+
+    try {
+        // Verificar si ya existe el correo
+        const usuarios = await getUsers();
+        const existente = usuarios.find(user => user.email === correo);
+        if (existente) {
+            Toastify({ text: "El correo ya está registrado", duration: 3000 }).showToast();
+            return;
+        }
+
+        // Crear nuevo usuario admin
+        const nuevoAdmin = {
+            usuario: nombre,
+            email: correo,
+            password: pass,
+            typeUser: "admin" 
+        };
+
+        await postUsers(nuevoAdmin);
+
+        Toastify({ text: "Administrador registrado con éxito", duration: 3000 }).showToast();
+
+        // Limpiar campos
+        name.value = "";
+        email.value = "";
+        password.value = "";
+        confirmarPassword.value = "";
+
+    } catch (error) {
+        console.error("Error al registrar admin:", error);
+        Toastify({ text: "No se pudo registrar el administrador", duration: 3000 }).showToast();
+    }
+});
+
 ///////Termina Menú registro///////
 
 

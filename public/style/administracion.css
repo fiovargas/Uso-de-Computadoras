@@ -36,6 +36,11 @@ main {
     align-items: center;
     padding: 0 30px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: fixed;   /* 👈 hace que quede fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;     /* para que quede por encima del sidebar */
 }
 
 #encabezado h1 {
@@ -97,7 +102,8 @@ main {
 /* //////////////////////////////// Contenido inicio //////////////////////////////// */
 
 #contenido {
-    margin-left: 270px; 
+    margin-left: 250px;
+    margin-top: 80px; 
     padding: 30px;
     flex: 1;
     text-align: center;

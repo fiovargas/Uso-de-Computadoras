@@ -20,6 +20,13 @@
       "email": "fvargas2001fwd@gmail.com",
       "password": "1234567",
       "typeUser": "estudiante"
+    },
+    {
+      "id": "fa5b",
+      "usuario": "fio",
+      "email": "fio123@gmail.com",
+      "password": "1234567",
+      "typeUser": "admin"
     }
   ],
   "Solicitudes": [
