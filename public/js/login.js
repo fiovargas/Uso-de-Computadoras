@@ -10,7 +10,7 @@ ingresar.addEventListener("click", async function () {
 
     if (!email || !pass) { // Validar campos vacíos
         Toastify({
-            text: "Debes completar todos los campos.",
+            text: "Debes completar todos los espacios vacios.",
             duration: 3000
         }).showToast();
         return;
@@ -36,16 +36,21 @@ ingresar.addEventListener("click", async function () {
 
             limpiarCampos();
 
-            setTimeout(() => {
-                window.location.href = "../pages/formulario.html"; 
+           setTimeout(() => { 
+                if (usuario.typeUser === "admin") {
+                    window.location.href = "../pages/administracion.html";
+
+                } else if (usuario.typeUser === "estudiante") {
+                    window.location.href = "../pages/formulario.html";
+                }
             }, 1500);
 
-        } else {
-            Toastify({
-                text: "Correo o contraseña incorrectos.",
-                duration: 3000
-            }).showToast();
-        }
+} else {
+    Toastify({
+        text: "Correo o contraseña incorrectos.",
+        duration: 3000
+    }).showToast();
+}
     } catch (error) {
         console.error("Error al obtener usuarios:", error);
         Toastify({
@@ -58,4 +63,4 @@ ingresar.addEventListener("click", async function () {
 function limpiarCampos() {
     correo.value = "";
     contraseña.value = "";
-}
+};

@@ -40,6 +40,8 @@ Siguiente.addEventListener("click", async function() {
 
         console.log(respuestaSoli);
         
+        Siguiente.disabled = true;
+        Siguiente.textContent = "Enviando...";
 
         Toastify({
             text: "Formulario guardado con éxito",
