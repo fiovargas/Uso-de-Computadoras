@@ -297,6 +297,8 @@ registrarse.addEventListener("click", async function () {
 
 ///////Comienza Menú cerrar///////
 cerrar.addEventListener("click", () => { 
+
+    
     Toastify({
             text: "Cerraste la sesión",
             duration: 3000

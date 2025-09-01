@@ -27,6 +27,27 @@
       "email": "fio123@gmail.com",
       "password": "1234567",
       "typeUser": "admin"
+    },
+    {
+      "id": "36a1",
+      "usuario": "a",
+      "email": "a",
+      "password": "a",
+      "typeUser": "admin"
+    },
+    {
+      "id": "700a",
+      "usuario": "Ca",
+      "email": "asdfgh",
+      "password": "123",
+      "typeUser": "estudiante"
+    },
+    {
+      "id": "b1cd",
+      "usuario": "qw3",
+      "email": "asdf@gmail.com",
+      "password": "12345678",
+      "typeUser": "estudiante"
     }
   ],
   "Solicitudes": [
@@ -64,6 +85,24 @@
       "fecha_salida": "2025-09-05",
       "fecha_entrada": "2025-09-19",
       "cod_pc": "123456",
+      "estado": "pendiente"
+    },
+    {
+      "id": "f74e",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-10",
+      "fecha_entrada": "2025-09-11",
+      "cod_pc": "334534533",
+      "estado": "pendiente"
+    },
+    {
+      "id": "3ead",
+      "idSolicitante": "fa46",
+      "sede": "capri",
+      "fecha_salida": "2025-09-10",
+      "fecha_entrada": "2025-09-26",
+      "cod_pc": "drgxhdthchy",
       "estado": "pendiente"
     }
   ]
