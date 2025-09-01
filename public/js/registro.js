@@ -49,9 +49,12 @@ const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === 
             duration: 3000
         }).showToast();
         return;
-
-
+        
     } else{
+        // El botón se deshabilita después de validaciones correctas.
+        registrarse.disabled = true;
+        registrarse.textContent = "Registrando...";
+
         // Creamos un objeto con los datos ingresados.
         const Regis = {
             usuario:usuario.value,

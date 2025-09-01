@@ -36,13 +36,12 @@ ingresar.addEventListener("click", async function () {
 
             limpiarCampos();
 
-           setTimeout(() => { // no puedo pasarlo a admin
+           setTimeout(() => { 
                 if (usuario.typeUser === "admin") {
                     window.location.href = "../pages/administracion.html";
 
                 } else if (usuario.typeUser === "estudiante") {
                     window.location.href = "../pages/formulario.html";
-                    
                 }
             }, 1500);
 

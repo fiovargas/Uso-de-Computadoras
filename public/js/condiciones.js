@@ -4,6 +4,10 @@ const btnEnviar = document.getElementById("btnEnviar");
 btnEnviar.addEventListener("click", function () {
     
      if (aceptacion.checked) {
+         // El botón se deshabilita despues de un envío válido.
+        btnEnviar.disabled = true;
+        btnEnviar.textContent = "Enviando...";
+
             Toastify({
             text: "Formulario enviado con éxito",
             duration: 3000
@@ -22,7 +26,3 @@ btnEnviar.addEventListener("click", function () {
 
         console.log(aceptacion);   
 });
-
-
-
-
