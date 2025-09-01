@@ -32,14 +32,6 @@
       "cod_pc": "nhnhdngfd"
     },
     {
-      "id": "f4cc",
-      "idSolicitante": "4f93",
-      "sede": "puntarenas",
-      "fecha_salida": "2025-09-01",
-      "fecha_entrada": "2025-09-02",
-      "cod_pc": "123456"
-    },
-    {
       "id": "8492",
       "idSolicitante": "4f93",
       "sede": "capri",
@@ -48,7 +40,6 @@
       "cod_pc": "3456",
       "estado": "aprobada"
     },
-
     {
       "id": "fddc",
       "idSolicitante": "fa46",
