@@ -269,7 +269,9 @@ main {
 
 #tablaPendientes th, #tablaPendientes td {
     text-align: left;
-    padding: 8px;
+    
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
 #tablaPendientes th {
@@ -303,4 +305,37 @@ main {
 
 #tablaPendientes button:hover {
     opacity: 0.8;
+}
+
+
+/* //////////////////////////////// Menú Historial //////////////////////////////// */
+
+#buscadorHistorial{
+    width: 300px;        
+    padding: 10px;       
+    font-size: 16px;     
+    border-radius: 8px;  
+    border: 1px solid #ccc;
+    display: block;
+    margin-left: auto;  
+    margin-right: 20px;  
+
+}
+
+#tablaHistorial {
+  margin: 20px auto;   /* centra la tabla horizontalmente */
+  border-collapse: collapse;
+  width: 80%;          /* ajusta el ancho (puedes cambiarlo) */
+  text-align: center;  /* centra el texto dentro de las celdas */
+}
+
+#tablaHistorial th,
+#tablaHistorial td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#tablaHistorial thead {
+  background: #f2f2f2;
+  font-weight: bold;
 }
