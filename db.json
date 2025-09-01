@@ -24,57 +24,157 @@
   ],
   "Solicitudes": [
     {
-      "id": "57e9",
-      "idSolicitante": "4f93",
+      "id": "ef1b",
+      "idSolicitante": "fa46",
       "sede": "puntarenas",
-      "fecha_salida": "2025-08-07",
-      "fecha_entrada": "2025-08-14",
-      "cod_pc": "nhnhdngfd"
-    },
-    {
-      "id": "8492",
-      "idSolicitante": "4f93",
-      "sede": "capri",
-      "fecha_salida": "2025-08-30",
-      "fecha_entrada": "2025-09-01",
-      "cod_pc": "3456",
+      "fecha_salida": "2025-09-03",
+      "fecha_entrada": "2025-09-19",
+      "cod_pc": "lluluiyu",
       "estado": "aprobada"
     },
     {
-      "id": "fddc",
-      "idSolicitante": "fa46",
-      "sede": "puntarenas",
-      "fecha_salida": "2025-09-01",
-      "fecha_entrada": "2025-09-04",
-      "cod_pc": "45679ws",
-      "estado": "denegada"
-    },
-    {
-      "id": "7ad4",
-      "idSolicitante": "fa46",
-      "sede": "puntarenas",
-      "fecha_salida": "2025-09-01",
-      "fecha_entrada": "2025-09-04",
-      "cod_pc": "sd45tfg23",
-      "estado": "aprobada"
-    },
-    {
-      "id": "24e2",
+      "id": "7d04",
       "idSolicitante": "fa46",
       "sede": "capri",
-      "fecha_salida": "2025-09-04",
-      "fecha_entrada": "2025-09-06",
-      "cod_pc": "3445rt",
-      "estado": "aprobada"
+      "fecha_salida": "2025-09-17",
+      "fecha_entrada": "2025-09-19",
+      "cod_pc": "fsfdfsdfsdfdfsfsd",
+      "estado": "Aprobada"
     },
     {
-      "id": "d224",
+      "id": "681d",
+      "idSolicitante": "fa46",
+      "sede": "capri",
+      "fecha_salida": "2025-09-10",
+      "fecha_entrada": "2025-09-18",
+      "cod_pc": "qqqqqqqqq",
+      "estado": "Aprobada"
+    },
+    {
+      "id": "2c41",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-18",
+      "fecha_entrada": "2025-09-20",
+      "cod_pc": "swswsws",
+      "estado": "Aprobada"
+    },
+    {
+      "id": "637d",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-17",
+      "fecha_entrada": "2025-09-28",
+      "cod_pc": "cccccccccccccccccccccc",
+      "estado": "Aprobada"
+    },
+    {
+      "id": "161d",
+      "idSolicitante": "fa46",
+      "sede": "capri",
+      "fecha_salida": "2025-09-10",
+      "fecha_entrada": "2025-09-14",
+      "cod_pc": "mmmmmmmmmmmmmmmmmm",
+      "estado": "Rechazar"
+    },
+    {
+      "id": "0e55",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-19",
+      "fecha_entrada": "2025-09-28",
+      "cod_pc": "tttttttttttttttttttttt",
+      "estado": "Rechazada"
+    },
+    {
+      "id": "cf37",
       "idSolicitante": "fa46",
       "sede": "puntarenas",
       "fecha_salida": "2025-09-02",
       "fecha_entrada": "2025-09-03",
-      "cod_pc": "hgf345",
-      "estado": "aprobada"
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "e0bb",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "b257",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "4cc4",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "fa85",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "f4a5",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "aef4",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "109b",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "6d9b",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
+    },
+    {
+      "id": "e43e",
+      "idSolicitante": "fa46",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "sdfghh",
+      "estado": "pendiente"
     }
   ]
 }
