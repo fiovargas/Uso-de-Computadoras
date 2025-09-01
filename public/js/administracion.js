@@ -47,8 +47,6 @@ inicio.addEventListener("click", () => {
 
 ///////Comienza Menú historial///////
 historial.addEventListener("click", async () => {
-    /* ocultarTodo(); */
-    /* historialContenedor.classList.remove("oculto"); */
     inicioContenedor.style.display = "none"
     historialContenedor.style.display = "block"
     pendientesContenedor.style.display = "none"
@@ -65,7 +63,8 @@ historial.addEventListener("click", async () => {
                 s.idSolicitante.toLowerCase().includes(texto) ||
                 s.fecha_salida.toLowerCase().includes(texto) ||
                 s.fecha_entrada.toLowerCase().includes(texto) ||
-                s.estado.toLowerCase().includes(texto)
+                s.estado.toLowerCase().includes(texto) ||
+                 s.cod_pc.toLowerCase().includes(texto)
             );
             mostrarHistorial(filtradas);
         });
@@ -240,6 +239,30 @@ registrarse.addEventListener("click", async function () {
         }).showToast();
         return;
     }
+
+     if (usuario.value.trim().length < 3) {
+        Toastify({
+            text: "El nombre de usuario debe tener mínimo 3 caracteres",
+            duration: 3000
+        }).showToast();
+        return;
+    };
+    
+    // Validación correo (contenga @ y .)
+    if (!email.value.includes("@") || !email.value.includes(".")) {
+        Toastify({ text: "El correo debe contener 'ej: @gmail.com'", 
+            duration: 3000 
+        }).showToast();
+        return;
+    };
+
+    if (password.value.length < 8) {
+        Toastify({
+            text: "La contraseña debe tener mínimo 8 caracteres",
+            duration: 3000
+        }).showToast();
+        return;
+    };
 
     // Validar contraseñas iguales
     if (pass !== confirmarPass) {
