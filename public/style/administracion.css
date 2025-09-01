@@ -265,11 +265,12 @@ main {
     border-collapse: collapse; 
     margin-top: 10px;
     font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 #tablaPendientes th, #tablaPendientes td {
     text-align: left;
-    
+    text-align: center;
     border: 1px solid #ccc;
     padding: 10px;
 }
@@ -278,6 +279,7 @@ main {
     background-color: #f0f0f0;
     position: sticky; 
     top: 0;
+    text-align: center;
 }
 
 #tablaPendientes tr:nth-child(even) {
