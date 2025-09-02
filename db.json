@@ -1,135 +1,106 @@
 {
   "Usuarios": [
     {
-      "id": "90c2",
-      "usuario": "nora",
-      "email": "nora2fwd@gmail.com",
-      "password": "nora1234",
-      "typeUser": "admin"
-    },
-    {
       "id": "fa5b",
       "usuario": "fio",
       "email": "fio123@gmail.com",
-      "password": "1234567",
+      "password": "123456789",
       "typeUser": "admin"
     },
     {
-      "id": "fa46",
-      "usuario": "steveN",
-      "email": "gsl@gamil.com",
+      "id": "4ac7",
+      "usuario": "Caleb",
+      "email": "caleb@gmail.com",
+      "password": "12345678",
+      "typeUser": "estudiante"
+    },
+    {
+      "id": "1297",
+      "usuario": "Nora",
+      "email": "nora12@gmail.com",
       "password": "123456789",
+      "typeUser": "admin"
+    },
+    {
+      "id": "cf0b",
+      "usuario": "Steven",
+      "email": "steven123@gmail.com",
+      "password": "123456789",
+      "typeUser": "admin"
+    },
+    {
+      "id": "c2f9",
+      "usuario": "Roger",
+      "email": "roger1@gmail.com",
+      "password": "21123456",
       "typeUser": "estudiante"
     },
     {
-      "id": "4f93",
-      "usuario": "fio",
-      "email": "fvargas2001fwd@gmail.com",
-      "password": "1234567",
+      "id": "cdc0",
+      "usuario": "Maria",
+      "email": "maria21@gmail.com",
+      "password": "98765432",
       "typeUser": "estudiante"
     },
     {
-      "id": "700a",
-      "usuario": "Ca",
-      "email": "asdfgh",
-      "password": "123",
+      "id": "826e",
+      "usuario": "Angelí",
+      "email": "Angelí@gmail.com",
+      "password": "123angelí",
       "typeUser": "estudiante"
     },
     {
-      "id": "b1cd",
-      "usuario": "qw3",
-      "email": "asdf@gmail.com",
-      "password": "12345678",
-      "typeUser": "estudiante"
-    },
-    {
-      "id": "f2cd",
-      "usuario": "carlos",
-      "email": "fvargas2011fwd@gmail.com",
-      "password": "12345678",
+      "id": "b959",
+      "usuario": "Dylan",
+      "email": "dylan12@gmail.com",
+      "password": "56781234",
       "typeUser": "estudiante"
     }
   ],
   "Solicitudes": [
     {
-      "id": "ef1b",
-      "idSolicitante": "fa46",
-      "sede": "puntarenas",
-      "fecha_salida": "2025-09-03",
-      "fecha_entrada": "2025-09-19",
-      "cod_pc": "lluluiyu",
-      "estado": "aprobada"
-    },
-    {
-      "id": "7d04",
-      "idSolicitante": "fa46",
-      "sede": "capri",
-      "fecha_salida": "2025-09-17",
-      "fecha_entrada": "2025-09-19",
-      "cod_pc": "fsfdfsdfsdfdfsfsd",
-      "estado": "Aprobada"
-    },
-    {
-      "id": "276d",
-      "idSolicitante": "4f93",
-      "sede": "puntarenas",
-      "fecha_salida": "2025-09-02",
-      "fecha_entrada": "2025-09-18",
-      "cod_pc": "123456",
-      "estado": "pendiente"
-    },
-    {
-      "id": "067c",
-      "idSolicitante": "4f93",
-      "sede": "puntarenas",
-      "fecha_salida": "2025-09-05",
-      "fecha_entrada": "2025-09-19",
-      "cod_pc": "123456",
-      "estado": "pendiente"
-    },
-    {
-      "id": "f74e",
-      "idSolicitante": "fa46",
-      "sede": "puntarenas",
-      "fecha_salida": "2025-09-10",
-      "fecha_entrada": "2025-09-11",
-      "cod_pc": "334534533",
-      "estado": "pendiente"
-    },
-    {
-      "id": "3ead",
-      "idSolicitante": "fa46",
-      "sede": "capri",
-      "fecha_salida": "2025-09-10",
-      "fecha_entrada": "2025-09-26",
-      "cod_pc": "drgxhdthchy",
-      "estado": "pendiente"
-    },
-    {
-      "id": "33ca",
-      "idSolicitante": "f2cd",
-      "sede": "capri",
-      "fecha_salida": "2025-08-22",
-      "fecha_entrada": "2025-09-22",
-      "cod_pc": "123456",
-      "estado": "Aprobada"
-    },
-    {
-      "id": "c07c",
-      "idSolicitante": "4f93",
+      "id": "0334",
+      "idSolicitante": "4ac7",
       "sede": "puntarenas",
       "fecha_salida": "2025-09-02",
       "fecha_entrada": "2025-09-03",
-      "cod_pc": "123456",
-      "estado": "pendiente"
+      "cod_pc": "5CD4078D13",
+      "estado": "Aprobada"
     },
     {
-      "id": "d45f",
-      "idSolicitante": null,
+      "id": "d11e",
+      "idSolicitante": "c2f9",
       "sede": "puntarenas",
       "fecha_salida": "2025-09-02",
       "fecha_entrada": "2025-09-03",
-      "cod_pc": "123456",
+      "cod_pc": "5CD4078D3K",
+      "estado": "Aprobada"
+    },
+    {
+      "id": "4956",
+      "idSolicitante": "cdc0",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "2L3K7S2",
+      "estado": "Rechazada"
+    },
+    {
+      "id": "2580",
+      "idSolicitante": "826e",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "13D97S2",
+      "estado": "Aprobada"
+    },
+    {
+      "id": "aab9",
+      "idSolicitante": "b959",
+      "sede": "capri",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "GL9F7S2",
       "estado": "pendiente"
     }
   ]

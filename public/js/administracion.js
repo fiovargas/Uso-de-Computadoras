@@ -61,10 +61,11 @@ historial.addEventListener("click", async () => {
             const texto = buscadorHistorial.value.toLowerCase();
             const filtradas = solicitudes.filter(s =>
                 s.idSolicitante.toLowerCase().includes(texto) ||
+                s.sede.toLowerCase().includes(texto) ||
                 s.fecha_salida.toLowerCase().includes(texto) ||
                 s.fecha_entrada.toLowerCase().includes(texto) ||
                 s.estado.toLowerCase().includes(texto) ||
-                 s.cod_pc.toLowerCase().includes(texto)
+                s.cod_pc.toLowerCase().includes(texto)
             );
             mostrarHistorial(filtradas);
         });
@@ -82,6 +83,7 @@ function mostrarHistorial(lista) {
     listaHistorial.innerHTML = lista.map(solicitud => `
         <tr>
             <td>${solicitud.idSolicitante}</td>
+            <td>${solicitud.sede}</td>
             <td>${solicitud.fecha_salida}</td>
             <td>${solicitud.fecha_entrada}</td>
             <td>${solicitud.cod_pc}</td>
@@ -94,8 +96,6 @@ function mostrarHistorial(lista) {
 
 ///////Comienza Menú pendientes///////
 pendientes.addEventListener("click", async () => { 
-    /* ocultarTodo(); */
-    /* pendientesContenedor.classList.remove("oculto"); */
 
     inicioContenedor.style.display = "none"
     historialContenedor.style.display = "none"
@@ -296,7 +296,8 @@ registrarse.addEventListener("click", async function () {
 
         Toastify({ 
             text: "Administrador registrado con éxito", 
-            duration: 3000 }).showToast();
+            duration: 3000 
+        }).showToast();
 
         // Limpiar campos
         name.value = "";
