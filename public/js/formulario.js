@@ -5,6 +5,30 @@ const sede = document.getElementById("sede");
 const salida = document.getElementById("salida");
 const regreso = document.getElementById("regreso");
 const codigo = document.getElementById("codigo");
+const cerrar = document.getElementById("cerrar")
+
+// 🔹 Asignar fecha de salida = hoy y regreso = mañana
+const hoy = new Date();
+const mañana = new Date(hoy);
+mañana.setDate(hoy.getDate() + 1);
+
+// Formatear a YYYY-MM-DD
+const formatoHoy = hoy.toISOString().split("T")[0];
+const formatoMañana = mañana.toISOString().split("T")[0];
+
+// Asignar valores automáticos
+salida.value = formatoHoy;
+regreso.value = formatoMañana;
+
+// Bloquear edición
+salida.readOnly = true;
+regreso.readOnly = true;
+
+Toastify({
+    text: "Las fechas se asignaron automáticamente",
+    duration: 2000
+}).showToast();
+
 
 // Obtener el usuario automáticamente desde localStorage
 const id_usuario_localstorage = localStorage.getItem("id_usuario");
@@ -17,15 +41,6 @@ Siguiente.addEventListener("click", async function() {
     const valorCodigo = codigo.value.trim();
 
     if (valorSede && valorSalida && valorRegreso && valorCodigo) {
-        
-        // Validar fechas
-        if (new Date(valorSalida) >= new Date(valorRegreso)) {
-            Toastify({
-                text: "La fecha de regreso debe ser posterior a la de salida",
-                duration: 3000
-            }).showToast();
-            return;
-        }
 
         const formu = {
             idSolicitante: id_usuario_localstorage, // viene de localStorage
@@ -67,3 +82,23 @@ function limpiarCampos() {
     regreso.value = "";
     codigo.value = "";
 };
+
+cerrar.addEventListener("click", () => { 
+
+    localStorage.clear();
+    
+    Toastify({
+        text: "Sesión cerrada",
+        duration: 3000
+    }).showToast();
+
+    if (!localStorage.getItem("usuarioActual")) {
+        setTimeout(() => {
+            window.location.href = "../pages/login.html";
+        }, 1000);
+    };
+});
+
+// Evitamos que vuelva con el botón atrás y ver caché
+window.history.forward();
+window.onunload = () => { null };

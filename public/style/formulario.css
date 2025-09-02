@@ -134,7 +134,7 @@ body{
     color: white;
 }
 
-/* //////////////////////////////// botón de Siguiente //////////////////////////////// */
+/* //////////////////////////////// botón de Siguiente y cerrar sesión //////////////////////////////// */
 
 #Siguiente{
     width: 100%;
@@ -144,4 +144,34 @@ body{
     color: white;
     margin: 16px 0;
     font-size: 16px;    
+}
+
+#btncerrar{
+    display: flex;
+    justify-content: flex-end; /* Mueve el botón a la derecha */
+    padding: 10px;
+}
+
+#cerrar{
+    background-color: #1f53c5;
+    color: white;               
+    border: none;              
+    padding: 10px 20px;         
+    border-radius: 8px;         
+    font-size: 16px;            
+    font-weight: bold;        
+    cursor: pointer;            
+    transition: background 0.3s, transform 0.2s; 
+}
+
+/* Efecto al pasar el mouse */
+#cerrar:hover {
+    background-color: #1f53c5; 
+    transform: scale(1.05); 
+}
+
+/* Efecto al hacer clic */
+#cerrar:active {
+    background-color: #1f53c5; 
+    transform: scale(0.98); 
 }
