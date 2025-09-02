@@ -231,7 +231,7 @@ registrarse.addEventListener("click", async function () {
     const pass = password.value.trim();
     const confirmarPass = confirmarPassword.value.trim();
 
-    // Validar campos vacíos
+     // --- VALIDACIONES ---
     if (!nombre || !correo || !pass || !confirmarPass) {
         Toastify({ 
             text: "Debes completar todos los campos", 
@@ -240,31 +240,30 @@ registrarse.addEventListener("click", async function () {
         return;
     }
 
-     if (usuario.value.trim().length < 3) {
-        Toastify({
-            text: "El nombre de usuario debe tener mínimo 3 caracteres",
-            duration: 3000
-        }).showToast();
-        return;
-    };
-    
-    // Validación correo (contenga @ y .)
-    if (!email.value.includes("@") || !email.value.includes(".")) {
-        Toastify({ text: "El correo debe contener 'ej: @gmail.com'", 
+    if (nombre.length < 3) {
+        Toastify({ 
+            text: "El nombre de usuario debe tener mínimo 3 caracteres", 
             duration: 3000 
         }).showToast();
         return;
-    };
+    }
 
-    if (password.value.length < 8) {
-        Toastify({
-            text: "La contraseña debe tener mínimo 8 caracteres",
-            duration: 3000
+    if (!correo.includes("@") || !correo.includes(".")) {
+        Toastify({ 
+            text: "El correo debe contener un formato válido (ej: usuario@gmail.com)", 
+            duration: 3000 
         }).showToast();
         return;
-    };
+    }
 
-    // Validar contraseñas iguales
+    if (pass.length < 8) {
+        Toastify({ 
+            text: "La contraseña debe tener mínimo 8 caracteres", 
+            duration: 3000 
+        }).showToast();
+        return;
+    }
+
     if (pass !== confirmarPass) {
         Toastify({ 
             text: "Las contraseñas no coinciden", 
@@ -297,8 +296,7 @@ registrarse.addEventListener("click", async function () {
 
         Toastify({ 
             text: "Administrador registrado con éxito", 
-            duration: 3000 
-        }).showToast();
+            duration: 3000 }).showToast();
 
         // Limpiar campos
         name.value = "";

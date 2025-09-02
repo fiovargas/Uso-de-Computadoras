@@ -20,11 +20,15 @@ body {
     flex: 1;
 }
 
-/* Estructura principal */
 main {
     display: flex;
     flex: 1;
 }
+
+.oculto{
+    display: none;
+}
+
 
 /* //////////////////////////////// Encabezado //////////////////////////////// */
 
@@ -36,11 +40,11 @@ main {
     align-items: center;
     padding: 0 30px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    position: fixed;   /* 👈 hace que quede fijo */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 20;     /* para que quede por encima del sidebar */
+    z-index: 20;     
 }
 
 #encabezado h1 {
@@ -54,8 +58,7 @@ main {
     width: auto;
 }
 
-/* //////////////////////////////// Menú //////////////////////////////// */
-
+/* //////////////////////////////// Sidebar de Menú //////////////////////////////// */
 
 #sidebar {
     width: 250px;
@@ -63,8 +66,8 @@ main {
     color: white;
     padding: 20px;
     position: fixed; 
-    top: 80px; /* altura del encabezado */
-    height: calc(100vh - 80px); /* toda la altura menos el header */
+    top: 80px;
+    height: calc(100vh - 80px); 
     left: 0;
     overflow-y: auto;
     box-shadow: 2px 0 6px rgba(0,0,0,0.1);
@@ -81,7 +84,7 @@ main {
 }
 
 #sidebar ul li.activo {
-    background-color: #1f53c5; /* color resaltado */
+    background-color: #1f53c5; 
     font-weight: bold;
 }
 
@@ -99,7 +102,7 @@ main {
     background-color: #1f53c5;
 }
 
-/* //////////////////////////////// Contenido inicio //////////////////////////////// */
+/* //////////////////////////////// Menú inicio //////////////////////////////// */
 
 #contenido {
     margin-left: 250px;
@@ -125,44 +128,7 @@ main {
     margin-top: 10px;
 }
 
-/* //////////////////////////////// Footer //////////////////////////////// */
-
-#piePagina {
-    background-color: #e3e3e3;
-    color: #333;
-    text-align: center;
-    padding: 15px 10px;
-    margin-top: auto;
-}
-
-#piePagina hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin-bottom: 10px;
-}
-
-#piePagina p {
-    margin: 5px 0;
-}
-
-/* //////////////////////////////// Responsive //////////////////////////////// */
-
-@media (max-width: 768px) {
-    #sidebar {
-        position: relative;
-        width: 100%;
-        top: 0;
-    }
-    #contenido {
-        margin-left: 0;
-    }
-}
-
-.oculto{
-    display: none;
-}
-
-/* //////////////////////////////// Contenido Registro Admon //////////////////////////////// */
+/* //////////////////////////////// Menú Registro Admin //////////////////////////////// */
 
 #Registro{
     width: 400px;
@@ -309,7 +275,6 @@ main {
     opacity: 0.8;
 }
 
-
 /* //////////////////////////////// Menú Historial //////////////////////////////// */
 
 #buscadorHistorial{
@@ -325,10 +290,10 @@ main {
 }
 
 #tablaHistorial {
-  margin: 20px auto;   /* centra la tabla horizontalmente */
+  margin: 20px auto; 
   border-collapse: collapse;
-  width: 80%;          /* ajusta el ancho (puedes cambiarlo) */
-  text-align: center;  /* centra el texto dentro de las celdas */
+  width: 80%;    
+  text-align: center; 
 }
 
 #tablaHistorial th,
@@ -340,4 +305,37 @@ main {
 #tablaHistorial thead {
   background: #f2f2f2;
   font-weight: bold;
+}
+
+/* //////////////////////////////// Footer //////////////////////////////// */
+
+#piePagina {
+    background-color: #e3e3e3;
+    color: #333;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: auto;
+}
+
+#piePagina hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#piePagina p {
+    margin: 5px 0;
+}
+
+/* //////////////////////////////// Responsive //////////////////////////////// */
+
+@media (max-width: 768px) {
+    #sidebar {
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+    #contenido {
+        margin-left: 0;
+    }
 }
