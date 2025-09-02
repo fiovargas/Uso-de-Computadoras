@@ -6,8 +6,24 @@
       "email": "fio123@gmail.com",
       "password": "1234567",
       "typeUser": "admin"
+    },
+    {
+      "id": "cf38",
+      "usuario": "madelin",
+      "email": "madelin34@gmail.com",
+      "password": "12q34w56e",
+      "typeUser": "estudiante"
     }
   ],
   "Solicitudes": [
+    {
+      "id": "0c27",
+      "idSolicitante": "cf38",
+      "sede": "capri",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "8CD3492PTC",
+      "estado": "pendiente"
+    }
   ]
 }
