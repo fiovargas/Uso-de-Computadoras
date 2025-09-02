@@ -113,6 +113,24 @@
       "fecha_entrada": "2025-09-22",
       "cod_pc": "123456",
       "estado": "Aprobada"
+    },
+    {
+      "id": "c07c",
+      "idSolicitante": "4f93",
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "123456",
+      "estado": "pendiente"
+    },
+    {
+      "id": "d45f",
+      "idSolicitante": null,
+      "sede": "puntarenas",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "123456",
+      "estado": "pendiente"
     }
   ]
 }

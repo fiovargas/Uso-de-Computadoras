@@ -5,7 +5,7 @@ const sede = document.getElementById("sede");
 const salida = document.getElementById("salida");
 const regreso = document.getElementById("regreso");
 const codigo = document.getElementById("codigo");
-const cerrar = document.getElementById("cerrar")
+const cerrar = document.getElementById("cerrar");
 
 // 🔹 Asignar fecha de salida = hoy y regreso = mañana
 const hoy = new Date();
