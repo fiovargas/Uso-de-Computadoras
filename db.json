@@ -55,6 +55,13 @@
       "email": "dylan12@gmail.com",
       "password": "56781234",
       "typeUser": "estudiante"
+  },
+  {
+      "id": "cf38",
+      "usuario": "madelin",
+      "email": "madelin34@gmail.com",
+      "password": "12q34w56e",
+      "typeUser": "estudiante"
     }
   ],
   "Solicitudes": [
@@ -101,6 +108,15 @@
       "fecha_salida": "2025-09-02",
       "fecha_entrada": "2025-09-03",
       "cod_pc": "GL9F7S2",
+    "estado": "pendiente"
+    },
+    {
+      "id": "0c27",
+      "idSolicitante": "cf38",
+      "sede": "capri",
+      "fecha_salida": "2025-09-02",
+      "fecha_entrada": "2025-09-03",
+      "cod_pc": "8CD3492PTC",
       "estado": "pendiente"
     }
   ]
