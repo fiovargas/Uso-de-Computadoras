@@ -250,7 +250,7 @@ registrarse.addEventListener("click", async function () {
 
     if (!correo.includes("@") || !correo.includes(".")) {
         Toastify({ 
-            text: "El correo debe contener un formato válido (ej: usuario@gmail.com)", 
+            text: "El correo debe contener 'ej: @gmail.com'", 
             duration: 3000 
         }).showToast();
         return;
