@@ -320,10 +320,22 @@ registrarse.addEventListener("click", async function () {
 
 ///////Comienza Menú cerrar///////
 cerrar.addEventListener("click", () => { 
+
+    localStorage.clear();
+    
     Toastify({
-            text: "Cerraste la sesión",
-            duration: 3000
+        text: "Cerraste la sesión",
+        duration: 3000
     }).showToast();
-    window.location.href = "../pages/login.html";
+
+    if (!localStorage.getItem("usuarioActual")) {
+        setTimeout(() => {
+            window.location.href = "../pages/login.html";
+        }, 1000);
+    };
 });
+
+// Evitamos que vuelva con el botón atrás y ver caché
+window.history.forward();
+window.onunload = () => { null };
 ///////Termina Menú cerrar///////

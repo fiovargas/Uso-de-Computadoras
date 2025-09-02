@@ -9,6 +9,42 @@ const registrarse = document.getElementById("registrarse");
 
 registrarse.addEventListener("click", async function () {
 
+    if (usuario.value === "" || email.value === "" ||  password.value === "") {
+        console.log("Los datos están incompletos");
+
+        Toastify({
+            text: "Los datos están incompletos",
+            duration: 3000
+        }).showToast();
+        return;
+        
+    };
+
+    if (usuario.value.trim().length < 3) {
+        Toastify({
+            text: "El nombre de usuario debe tener mínimo 3 caracteres",
+            duration: 3000
+        }).showToast();
+        return;
+    };
+
+    
+    // Validación correo (contenga @ y .)
+    if (!email.value.includes("@") || !email.value.includes(".")) {
+        Toastify({ text: "El correo debe contener 'ej: @gmail.com'", 
+            duration: 3000 
+        }).showToast();
+        return;
+    };
+
+    if (password.value.length < 8) {
+        Toastify({
+            text: "La contraseña debe tener mínimo 8 caracteres",
+            duration: 3000
+        }).showToast();
+        return;
+    };
+
     // Verificamos si las contraseñas coinciden.
 if (password.value !== confirmarPassword.value) {
 
@@ -41,16 +77,7 @@ const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === 
         return;
     }
 
-    if (usuario.value === "" || email.value === "" ||  password.value === "") {
-        console.log("Los datos están incompletos");
-
-        Toastify({
-            text: "Los datos están incompletos",
-            duration: 3000
-        }).showToast();
-        return;
-        
-    } else{
+    else{
         // El botón se deshabilita después de validaciones correctas.
         registrarse.disabled = true;
         registrarse.textContent = "Registrando...";
@@ -97,4 +124,3 @@ function limpiarCampos() {
     password.value = "";
     confirmarPassword.value = "";
 };
-
