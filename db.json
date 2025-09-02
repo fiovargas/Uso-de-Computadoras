@@ -27,6 +27,13 @@
       "email": "fio123@gmail.com",
       "password": "1234567",
       "typeUser": "admin"
+    },
+    {
+      "id": "14b6",
+      "usuario": "Caleb",
+      "email": "caleb123@gmail.com",
+      "password": "12345678",
+      "typeUser": "admin"
     }
   ],
   "Solicitudes": [
