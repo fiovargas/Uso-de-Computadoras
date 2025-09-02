@@ -234,7 +234,7 @@ registrarse.addEventListener("click", async function () {
      // --- VALIDACIONES ---
     if (!nombre || !correo || !pass || !confirmarPass) {
         Toastify({ 
-            text: "Debes completar todos los campos", 
+            text: "Debes completar todos los espacios vacíos", 
             duration: 3000 
         }).showToast();
         return;
@@ -322,7 +322,7 @@ cerrar.addEventListener("click", () => {
     localStorage.clear();
     
     Toastify({
-        text: "Cerraste la sesión",
+        text: "Sesión cerrada",
         duration: 3000
     }).showToast();
 

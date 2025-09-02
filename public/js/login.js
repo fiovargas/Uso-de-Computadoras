@@ -10,7 +10,7 @@ ingresar.addEventListener("click", async function () {
 
     if (!email || !pass) { // Validar campos vacíos
         Toastify({
-            text: "Debes completar todos los espacios vacios.",
+            text: "Debes completar todos los espacios vacíos",
             duration: 3000
         }).showToast();
         return;
@@ -47,14 +47,14 @@ ingresar.addEventListener("click", async function () {
 
 } else {
     Toastify({
-        text: "Correo o contraseña incorrectos.",
+        text: "El correo o contraseña están incorrectos",
         duration: 3000
     }).showToast();
 }
     } catch (error) {
         console.error("Error al obtener usuarios:", error);
         Toastify({
-            text: "No se pudo conectar al servidor.",
+            text: "No se pudo conectar al servidor",
             duration: 3000
         }).showToast();
     }

@@ -54,7 +54,7 @@ Siguiente.addEventListener("click", async function() {
 
     } else {
         Toastify({
-            text: "Los datos están incompletos",
+            text: "Debes completar todos los espacios vacíos",
             duration: 3000
         }).showToast();  
     }
