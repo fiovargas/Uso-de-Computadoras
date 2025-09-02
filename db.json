@@ -8,6 +8,13 @@
       "typeUser": "admin"
     },
     {
+      "id": "fa5b",
+      "usuario": "fio",
+      "email": "fio123@gmail.com",
+      "password": "1234567",
+      "typeUser": "admin"
+    },
+    {
       "id": "fa46",
       "usuario": "steveN",
       "email": "gsl@gamil.com",
@@ -22,20 +29,6 @@
       "typeUser": "estudiante"
     },
     {
-      "id": "fa5b",
-      "usuario": "fio",
-      "email": "fio123@gmail.com",
-      "password": "1234567",
-      "typeUser": "admin"
-    },
-    {
-      "id": "36a1",
-      "usuario": "a",
-      "email": "a",
-      "password": "a",
-      "typeUser": "admin"
-    },
-    {
       "id": "700a",
       "usuario": "Ca",
       "email": "asdfgh",
@@ -46,6 +39,13 @@
       "id": "b1cd",
       "usuario": "qw3",
       "email": "asdf@gmail.com",
+      "password": "12345678",
+      "typeUser": "estudiante"
+    },
+    {
+      "id": "f2cd",
+      "usuario": "carlos",
+      "email": "fvargas2011fwd@gmail.com",
       "password": "12345678",
       "typeUser": "estudiante"
     }
@@ -104,6 +104,15 @@
       "fecha_entrada": "2025-09-26",
       "cod_pc": "drgxhdthchy",
       "estado": "pendiente"
+    },
+    {
+      "id": "33ca",
+      "idSolicitante": "f2cd",
+      "sede": "capri",
+      "fecha_salida": "2025-08-22",
+      "fecha_entrada": "2025-09-22",
+      "cod_pc": "123456",
+      "estado": "Aprobada"
     }
   ]
 }
