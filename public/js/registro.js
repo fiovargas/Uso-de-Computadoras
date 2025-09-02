@@ -13,7 +13,7 @@ registrarse.addEventListener("click", async function () {
         console.log("Los datos están incompletos");
 
         Toastify({
-            text: "Los datos están incompletos",
+            text: "Debes completar todos los espacios vacíos",
             duration: 3000
         }).showToast();
         return;
@@ -103,7 +103,7 @@ const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === 
 
         // Mostramos un mensaje de éxito.
             Toastify({
-            text: "Registro guardado con exito",
+            text: "Registro guardado con éxito",
             duration: 3000
         }).showToast();
 
@@ -112,7 +112,6 @@ const nombreUsuarioExistente = usuariosExistentes.find(user => user.usuario === 
             setTimeout(() => {
                 window.location.href = "../pages/login.html";
             }, 1000);
-
     }
 });
 
